@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="checkbox" name="" id="check" onclick="hidebox" >
+    <p id="t1" style="border: 1px solid; display: none;"></p>
+    <table style="border: 1px solid black;">
+        <tr>
+            <th>Check</th>
+            <th>No</th>
+            <th>Remark</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td><input type="checkbox" placeholder="Enter" name="" id="check1"></td>
+            <td>01</td>
+            <td><input type="text" placeholder="Enter Your Name" id="remark1" disabled></td>
+            <td id="Active1" style="color: red;">Deactive</td>
+        </tr>
+        <tr> <td><input type="checkbox" placeholder="Enter" name="" id="check2"></td>
+            <td>02</td>
+            <td><input type="text" placeholder="Enter Your Name" id="remark2" disabled></td>
+            <td id="Active2" style="color: red;">Deactive</td>
+        </tr>
+        <script>
+            let a1 = document.getElementById("Active1") ;
+            let a2 = document.getElementById("Active2");
+
+            document.getElementById("check").onclick=function(){
+                document.getElementById("t1").style.colour="block";
+            }
+            document.getElementById("check1").onchange=function(){
+                document.getElementById('remark1').disabled=!this.checked;
+                a1.style.color="green";
+                a1.innerHTML="Active1";
+            }
+            document.getElementById("check2").onchange=function(){
+                document.getElementById('remark2').disabled=!this.checked;
+                a2.style.color="green";
+                a2.innerHTML="Active2";
+            }
+
+        </script>
+    </table>
+</body>
+</html>

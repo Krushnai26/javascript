@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .div1{
+        border: 1px solid black;
+    }
+    .div2{
+       border:  1px solid black ;
+       height: 30px;
+    }
+</style>
+
+<body>
+<div class="div1">jid</div>
+<input type="checkbox" name="" id="your box">
+<input id="your text" placeholder="div 1 holder" type="text" disabled><br><br>
+<div class="div2">abc</div><br><br>
+<div class="div2">abc</div>
+<script>
+    document.getElementById('your box') .onclick=function() {
+        document.getElementById('your text').disabled=!this.checked;
+    }
+    const a = document.getElementsByClassName('div2');
+    a[1].style.backgroundColor = "red";
+</script>
+</body>
+
+</html>

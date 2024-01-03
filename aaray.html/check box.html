@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!-- <input type="checkbox" name="" id="click">
+    <p id="p1" style="color: black;">Hello</p> --> 
+    <input type="checkbox" name="" id="click">
+    <p id="p2" style="color: black;"></p> 
+    <input type="checkbox" name="" id="click">
+    <p id="t1" style="border: 1px black solid; display: none;"></p> 
+    
+     <table style="border: 1px solid black;" >
+        <tr>
+            <th>check</th>
+            <th>No</th>
+            <th>Remark</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <th><input type="checkbox" name="" id="check1"></th>
+            <th>01</th>
+            <th><input type="text" placeholder="Enter" name="" id="" disabled></th>
+            <th><p id="j1" >Deactive</p></th>
+        </tr>
+        <tr>
+            <th><input type="checkbox" name="" id="check2"></th>
+            <th>02</th>
+            <th><input type="text" placeholder="Enter" name="" id="" disabled></th>
+            <th><p id="j2" >Deactive</p></th>
+        </tr>
+    </table>
+<script>
+    let a1 =document.getElementById("j1")
+    let b1 =document.getElementById("j2");
+
+        document.getElementById("check").onclick=function(){
+     document.getElementById("t1").style.display="block";
+    };
+
+ document.getElementById("check1").onchange=function(){
+      document.getElementById("j1").disabled=!this.checked;
+      a1.style.color="green";
+      a1.innerHTML="Active";
+   };
+   document.getElementById("check2").onchange=function(){
+      document.getElementById("j2").disabled=!this.checked;
+      b1.style.color="green";
+      b1.innerHTML="Active";
+   };
+
+   document.getElementById("check2").onclick=function(){
+      document.getElementById("j2").style.color="red";
+   };
+    
+    //document.getElementById("click").onclick=function(){
+     //  document.getElementById("p1").style.color="red";
+   // };
+</script>
+</body>
+</html>

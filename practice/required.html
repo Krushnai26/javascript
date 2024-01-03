@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>Username validation</h1>
+   <label for="username">Username()</label>
+   <input type="text" id="username" id="sessionNo" name="sessionNum" onkeydown="limitText(this,8);"
+   onkeyup="limitText(this,8);""/>
+   <button onclick="validateUsername()">validate</button>
+   <div id="result"></div>
+
+   <script>
+function limitText(limitField,limitNum) {
+    if (limitField.value.length > limitNum) {
+        limitField.value = limitField.value.substring(0,limitNum);
+    }
+}
+
+    function validateUsername(){
+        const username = document.getElementById("username").value;
+        const pattern =  /^[a-zA-Z0-9_-]{5,8}$/;
+
+        if (pattern.test(username)){
+            document.getElementById("result").textContent = "valid username!";
+            document.getElementById("result").style.color = "green";
+        }else{
+            document.getElementById("result").textContent = "Invalid username.please use 5-8 characters";
+            document.getElementById("result").style.color = "red";
+        }
+    }
+   </script>
+</body>
+</html>

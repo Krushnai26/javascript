@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function abc(name,city){
+        alert('Enter Name :' +name+ '\nEnter City :' +city);
+    }
+    function xyz (callback){
+        var name=prompt('Enter Name')
+        var city=prompt('Enter City')
+        callback(name,city)
+    }
+    xyz(abc)
+   </script>
+</body>
+</html>

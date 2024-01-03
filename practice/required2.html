@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+    <tr>
+        <td><input type="checkbox" name="" id="checkbox1" onchange="changecolour()">
+        </td>
+        <td>01</td>
+        <td><input type="text"></td>
+        <td id="col1">active</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id="checkbox2" onchange="checked()"></td>
+        <td>02</td>
+        <td><input type="text" name="" id="input2" disabled></td>
+        <td id="col2">active</td>
+    </tr>
+</table>
+<script>
+    function changecolour() {
+        var checkbox = document.getElementById("checkbox1");
+        var col1 = document.getElementById("col1");
+
+        if (checkbox.checked) {
+            col1.classlist.add("colour");
+        } else {
+col1.classList.remove("colour")
+        }
+    }
+</script>
+</body>
+</html>
